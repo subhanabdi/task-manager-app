@@ -1,0 +1,272 @@
+/* ============= GLOBAL CSS =============== */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Lato:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px*/
+}
+
+:root {
+  /* Font size */
+  --extra-large-text: 4.8rem;
+  --large-large-text: 3.2rem;
+  --large-text: 2.4rem;
+  --large-medium-text: 2rem;
+  --medium-text: 1.8rem;
+  --medium-small-text: 1.6rem;
+  --small-text: 1.4rem;
+  --extra-small-text: 1.2rem;
+
+  /* Color */
+  --main-color: #d375b9;
+  --label-color: #697386;
+  --task-color: #494c6b;
+  --small-text-color: #9495a5;
+  --white-color: #fff;
+  --normal-color: #697386;
+  --complete-task-color: #d1d2da;
+
+  --input-text-color: #000;
+  --show-password-color: #aa3780;
+
+  --filter-btn-color: (--small-text-color);
+
+  /* Backgrounds */
+  --primary-background: #fafafa;
+  /* --secondary-background is background of  the task container and background of login and singup */
+  --secondary-background: #fff;
+  --profile-background: #fff;
+  --button-background: #d375b9;
+
+  --task-background: #fff;
+  --back-drop-background: rgba(0, 0, 0, 0.75);
+  --input-background: #fff;
+
+  /* Shadow */
+  --main-shadow: 6px 6px 15px 0px rgba(79, 79, 79, 0.25);
+  --task-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --button-shadow: 0px 2.7px 2.2px 0px rgba(0, 0, 0, 0.02),
+    0px 6.6px 5.3px 0px rgba(0, 0, 0, 0.03),
+    0px 12.5px 10px 0px rgba(0, 0, 0, 0.04);
+  --label-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  --profile-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-background);
+  z-index: -99;
+}
+
+.dark-theme {
+  --main-color: #d375b9;
+  --task-color: #c8cbe7;
+  --small-text-color: #5b5e7e;
+  --white-color: #fff;
+
+  --hover-color: #aa3780;
+
+  --filter-btn-color: #e3e4f1;
+  --input-text-color: #fff;
+
+  --show-password-color: #fff;
+
+  --background-color: #241229;
+  --primary-background: #241229;
+  --secondary-background: #241229;
+  --profile-background: #241229;
+
+  --task-background: #25273d;
+  --back-drop-background: rgba(0, 0, 0, 0.75);
+  --input-background: #404363;
+
+  /* Shadow */
+  --main-shadow: 6px 6px 15px 0px rgba(79, 79, 79, 0.25);
+  --task-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --button-shadow: 0px 2.7px 2.2px 0px rgba(0, 0, 0, 0.02),
+    0px 6.6px 5.3px 0px rgba(0, 0, 0, 0.03),
+    0px 12.5px 10px 0px rgba(0, 0, 0, 0.04);
+  --label-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  --profile-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom toast font size */
+.Toastify__toast-body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: var(--extra-large-text);
+  color: var(--main-color);
+  margin-bottom: 3.6rem;
+  text-align: center;
+}
+
+label {
+  display: block;
+  font-size: var(--medium-small-text);
+  color: var(--label-color);
+  margin-bottom: 1.1rem;
+}
+
+.main-input {
+  width: 100%;
+  font-size: 19px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  height: 4.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, rgba(60, 66, 87, 0.12));
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+  padding-left: 4px;
+  background: transparent;
+}
+*:focus {
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid var(--main-color);
+}
+
+.cta-button {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 6rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: var(--large-text);
+  border-radius: 6px;
+  box-shadow: var(--button-shadow);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 960px) {
+  .cta-button {
+    margin-top: 4.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .normal-text {
+    margin-bottom: 16px;
+  }
+}
+
+.cta-button:hover {
+  background-color: #ac6391;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input {
+  border: none;
+}
+
+.normal-text {
+  color: var(--normal-color);
+  font-size: var(--large-medium-text);
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+  background: transparent;
+  border: 0;
+}
+a:active {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .cta-button {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .cta-button {
+    padding: 1rem 1rem;
+    font-size: 18px;
+  }
+}
+
+.isArabic label {
+  text-align: right;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.isArabic .add-input {
+  text-align: right;
+  padding-right: 6rem;
+}
+
+ .isArabic .inside-main {
+   flex-direction: row-reverse !important;
+ }
+
+.isArabic .image-container {
+  height: 4rem;
+}
+
+ /* .isArabic .image-container .inside-image {
+  height: 56.4rem !important;
+ } */
+
+.isArabic .top-dashboard {
+   flex-direction: row-reverse !important;
+  }
+ 
+ @media (max-width: 960px) {
+
+   .isArabic .image-container .inside-image {
+     width: 100%;
+     height: 100% !important;
+     object-fit: cover;
+    }
+  }
+
+  .isArabic .additional-info {
+    flex-direction: row-reverse;
+  } 
+
+
+.isArabic .additional-info button {
+  font-size: 18px !important;
+}
+.isArabic .additional-info span {
+  font-size: 18px !important;
+}
+
+
